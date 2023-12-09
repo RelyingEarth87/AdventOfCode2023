@@ -28,7 +28,7 @@ def calc_steps(curr_key, lookup, directions):
             direction_num = 0
         else:
             direction_num += 1
-            
+
         steps += 1
 
     return steps
