@@ -18,7 +18,6 @@ def make_lookup(destinations):
 def calc_steps(curr_key, lookup, directions):
     direction_num = 0
     steps = 0
-    keys = [curr_key]
     while curr_key[2] != 'Z':
         instruction = directions[direction_num]
         if instruction == 'L':
@@ -29,17 +28,13 @@ def calc_steps(curr_key, lookup, directions):
             direction_num = 0
         else:
             direction_num += 1
-
-        keys.append(curr_key)
+            
         steps += 1
 
     return steps
 
 def main():
     file = open('inputD8.txt', 'r')
-    #file = open('input8Test.txt', 'r')
-    #file = open('input8Test1.txt', 'r')
-    #file = open('input8Test2.txt', 'r')
 
     lines = file.readlines()
     directions = lines[0].strip()
